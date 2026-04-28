@@ -1,7 +1,8 @@
 #include "lists.h"
 #include <stdlib.h>
 
-/* (*head)->prev->prev = (*head)->prev; fixed by (*head)->prev->next = (*head)->next; */
+/* head.prev.prev.prev */
+/* head.prev.next.next */
 /* (*head)->prev->next = (*head)->next; */
 /* (*head)->next->prev = (*head)->prev; */
 
