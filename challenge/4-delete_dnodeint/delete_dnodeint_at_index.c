@@ -3,6 +3,7 @@
 
 /* head.prev.prev.prev */
 /* head.prev.next.next */
+
 /**
  * delete_dnodeint_at_index - deletes node at given index
  * @head: pointer to head of list
@@ -36,10 +37,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 
 	if (tmp->prev != NULL)
-		tmp->prev->next = tmp->next;
+		tmp->prev->next = tmp->next;/* (*head)->prev->next = (*head)->next; */
 
 	if (tmp->next != NULL)
-		tmp->next->prev = tmp->prev;
+		tmp->next->prev = tmp->prev;/* (*head)->next->prev = (*head)->prev; */
 
 	free(tmp);
 	return (1);
