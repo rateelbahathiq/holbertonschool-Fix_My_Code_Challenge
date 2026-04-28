@@ -1,6 +1,8 @@
 #include "lists.h"
 #include <stdlib.h>
 
+/* head.prev.prev.prev */
+/* head.prev.next.next */
 /**
  * delete_dnodeint_at_index - deletes node at given index
  * @head: pointer to head of list
