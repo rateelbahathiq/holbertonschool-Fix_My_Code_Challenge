@@ -1,8 +1,9 @@
 #include "lists.h"
 #include <stdlib.h>
 
-/* head.prev.prev.prev */
-/* head.prev.next.next */
+/* (*head)->prev->prev = (*head)->prev; fixed by (*head)->prev->next = (*head)->next; */
+/* (*head)->prev->next = (*head)->next; */
+/* (*head)->next->prev = (*head)->prev; */
 
 /**
  * delete_dnodeint_at_index - deletes node at given index
@@ -37,10 +38,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 
 	if (tmp->prev != NULL)
-		tmp->prev->next = tmp->next;/* (*head)->prev->next = (*head)->next; */
+		tmp->prev->next = tmp->next;
 
 	if (tmp->next != NULL)
-		tmp->next->prev = tmp->prev;/* (*head)->next->prev = (*head)->prev; */
+		tmp->next->prev = tmp->prev;
 
 	free(tmp);
 	return (1);
